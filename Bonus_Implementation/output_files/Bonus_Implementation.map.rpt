@@ -1,0 +1,882 @@
+Analysis & Synthesis report for Bonus_Implementation
+Mon Dec  2 19:35:08 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "HazardDetectionUnit:HD_instance_9"
+ 10. Port Connectivity Checks: "HazardDetectionUnit:HD_instance_8"
+ 11. Port Connectivity Checks: "HazardDetectionUnit:HD_instance_7"
+ 12. Port Connectivity Checks: "MemoryAccess:MEM_instance_1|Bit_adder_8:B1"
+ 13. Port Connectivity Checks: "MemoryAccess:MEM_instance_1"
+ 14. Port Connectivity Checks: "ExecutionTasks:EX_instance_2"
+ 15. Port Connectivity Checks: "ExecutionTasks:EX_instance_1"
+ 16. Port Connectivity Checks: "RegisterRead:RR_instance_1|RF:RF1"
+ 17. Port Connectivity Checks: "RegisterRead:RR_instance_1|Bit_adder_8:B1"
+ 18. Port Connectivity Checks: "RegisterRead:RR_instance_1"
+ 19. Port Connectivity Checks: "Scheduler:SS_instance_1|Qu:Q"
+ 20. Port Connectivity Checks: "Scheduler:SS_instance_1"
+ 21. Port Connectivity Checks: "InstructionDecode:ID_instance_2"
+ 22. Port Connectivity Checks: "InstructionDecode:ID_instance_1|Bit_adder_1:Adder|Full_Adder:add_instance_15"
+ 23. Port Connectivity Checks: "InstructionDecode:ID_instance_1|Bit_adder_1:Adder"
+ 24. Port Connectivity Checks: "InstructionDecode:ID_instance_1"
+ 25. Port Connectivity Checks: "InstructionFetch:IF_instance_1|Memory_asyncread_syncwrite:Mem1"
+ 26. Port Connectivity Checks: "InstructionFetch:IF_instance_1|Bit_adder_8:B2"
+ 27. Port Connectivity Checks: "InstructionFetch:IF_instance_1|Bit_adder_8:B1"
+ 28. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Mon Dec  2 19:35:08 2019       ;
+; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name               ; Bonus_Implementation                        ;
+; Top-level Entity Name       ; TopLevel                                    ;
+; Family                      ; MAX V                                       ;
+; Total logic elements        ; 0                                           ;
+; Total pins                  ; 2                                           ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                ;
++------------------------------------------------------------------+--------------------+----------------------+
+; Option                                                           ; Setting            ; Default Value        ;
++------------------------------------------------------------------+--------------------+----------------------+
+; Device                                                           ; 5M1270ZT144C5      ;                      ;
+; Top-level entity name                                            ; TopLevel           ; Bonus_Implementation ;
+; Family name                                                      ; MAX V              ; Cyclone V            ;
+; Use smart compilation                                            ; Off                ; Off                  ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                   ;
+; Enable compact report table                                      ; Off                ; Off                  ;
+; Restructure Multiplexers                                         ; Auto               ; Auto                 ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                  ;
+; Preserve fewer node names                                        ; On                 ; On                   ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable               ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001         ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993            ;
+; State Machine Processing                                         ; Auto               ; Auto                 ;
+; Safe State Machine                                               ; Off                ; Off                  ;
+; Extract Verilog State Machines                                   ; On                 ; On                   ;
+; Extract VHDL State Machines                                      ; On                 ; On                   ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                  ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000                 ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                  ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                   ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                   ;
+; Parallel Synthesis                                               ; On                 ; On                   ;
+; NOT Gate Push-Back                                               ; On                 ; On                   ;
+; Power-Up Don't Care                                              ; On                 ; On                   ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                  ;
+; Remove Duplicate Registers                                       ; On                 ; On                   ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                  ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                  ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                  ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                  ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                  ;
+; Ignore SOFT Buffers                                              ; On                 ; On                   ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                  ;
+; Optimization Technique                                           ; Balanced           ; Balanced             ;
+; Carry Chain Length                                               ; 70                 ; 70                   ;
+; Auto Carry Chains                                                ; On                 ; On                   ;
+; Auto Open-Drain Pins                                             ; On                 ; On                   ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                  ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto                 ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto                 ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                   ;
+; Allow Synchronous Control Signals                                ; On                 ; On                   ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                  ;
+; Auto Resource Sharing                                            ; Off                ; Off                  ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                   ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                  ;
+; Report Parameter Settings                                        ; On                 ; On                   ;
+; Report Source Assignments                                        ; On                 ; On                   ;
+; Report Connectivity Checks                                       ; On                 ; On                   ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                  ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                    ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation   ;
+; HDL message level                                                ; Level2             ; Level2               ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                  ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000                 ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000                 ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                  ;
+; Clock MUX Protection                                             ; On                 ; On                   ;
+; Block Design Naming                                              ; Auto               ; Auto                 ;
+; Synthesis Effort                                                 ; Auto               ; Auto                 ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                   ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium               ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto                 ;
++------------------------------------------------------------------+--------------------+----------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++-------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path    ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                   ; Library ;
++-------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; Scheduler.vhdl                      ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Scheduler.vhdl                      ;         ;
+; Qu.vhdl                             ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl                             ;         ;
+; WriteBack (1).vhdl                  ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/WriteBack (1).vhdl                  ;         ;
+; TopLevel.vhdl                       ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl                       ;         ;
+; SixteenBitAdder.vhdl                ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/SixteenBitAdder.vhdl                ;         ;
+; RF.vhdl                             ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RF.vhdl                             ;         ;
+; RegisterRead.vhdl                   ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RegisterRead.vhdl                   ;         ;
+; MemoryAccess.vhdl                   ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/MemoryAccess.vhdl                   ;         ;
+; Memory_Data.vhdl                    ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_Data.vhdl                    ;         ;
+; Memory_asyncread_syncwrite.vhdl.vhd ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_asyncread_syncwrite.vhdl.vhd ;         ;
+; InstructionFetch.vhdl               ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionFetch.vhdl               ;         ;
+; InstructionDecode.vhdl              ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl              ;         ;
+; HazardDetectionUnit.vhd             ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/HazardDetectionUnit.vhd             ;         ;
+; Gates.vhdl                          ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl                          ;         ;
+; Full_Adder.vhdl                     ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Full_Adder.vhdl                     ;         ;
+; ExecutionTasks.vhdl                 ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl                 ;         ;
+; Encoder.vhdl                        ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Encoder.vhdl                        ;         ;
+; EightBitAdder.vhdl                  ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/EightBitAdder.vhdl                  ;         ;
+; Decoder.vhdl                        ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl                        ;         ;
+; BitwiseNand.vhdl                    ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/BitwiseNand.vhdl                    ;         ;
+; ALU.vhdl                            ; yes             ; User VHDL File  ; /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ALU.vhdl                            ;         ;
++-------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 0     ;
+;     -- Combinational with no register       ; 0     ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- 2 input functions                    ; 0     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 2     ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; |TopLevel                  ; 0 (0)       ; 0            ; 0          ; 2    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel           ; TopLevel    ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "HazardDetectionUnit:HD_instance_9"                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ra_bit ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "HazardDetectionUnit:HD_instance_8"                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ra_bit ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "HazardDetectionUnit:HD_instance_7"                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ra_bit ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MemoryAccess:MEM_instance_1|Bit_adder_8:B1"                                                         ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                 ; Type   ; Severity ; Details                                                                             ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; input_vector2[15..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; output_vector[16]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MemoryAccess:MEM_instance_1"                                                                ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; pc_out       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero_bit_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; r7_bit_out   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ExecutionTasks:EX_instance_2"                                                                ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; pc_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wr_c_bit      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; beq_condn_bit ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ExecutionTasks:EX_instance_1"                                                                ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; pc_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wr_c_bit      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; beq_condn_bit ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterRead:RR_instance_1|RF:RF1" ;
++-------------+-------+----------+------------------------------+
+; Port        ; Type  ; Severity ; Details                      ;
++-------------+-------+----------+------------------------------+
+; read_en     ; Input ; Info     ; Stuck at VCC                 ;
+; in_select_4 ; Input ; Info     ; Stuck at VCC                 ;
++-------------+-------+----------+------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterRead:RR_instance_1|Bit_adder_8:B1"                                                          ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                 ; Type   ; Severity ; Details                                                                             ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; input_vector2[15..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; input_vector2[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; output_vector        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterRead:RR_instance_1"                                                                    ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; o0              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; o1              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; o2              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; o3              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; o4              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; o5              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; o6              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; o7              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; start_bit_out_1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out_prop_r_1    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out_prop_r_2    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out_prop_r_3    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Scheduler:SS_instance_1|Qu:Q"                                                                     ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; out_data_1[85..70] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out_data_1[53..1]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out_data_2[85..70] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out_data_2[53..22] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out_data_2[18..1]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out_data_3[85..70] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out_data_3[53..22] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out_data_3[18..1]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; underflow          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; underflow_bits     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; pop_num_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Scheduler:SS_instance_1"                                                                  ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; overflow   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; valid_mask ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "InstructionDecode:ID_instance_2"                                                                   ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; sm_lm_mux_control   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; normal_jump_address ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ir_id_enable        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; flag_bit            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; prop_reg            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "InstructionDecode:ID_instance_1|Bit_adder_1:Adder|Full_Adder:add_instance_15"       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "InstructionDecode:ID_instance_1|Bit_adder_1:Adder" ;
++----------------------+-------+----------+-------------------------------------+
+; Port                 ; Type  ; Severity ; Details                             ;
++----------------------+-------+----------+-------------------------------------+
+; input_vector1[15..9] ; Input ; Info     ; Stuck at GND                        ;
+; carin                ; Input ; Info     ; Stuck at GND                        ;
++----------------------+-------+----------+-------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "InstructionDecode:ID_instance_1"                                                                   ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; sm_lm_mux_control   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; normal_jump_address ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ir_id_enable        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; flag_bit            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; prop_reg            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "InstructionFetch:IF_instance_1|Memory_asyncread_syncwrite:Mem1" ;
++------------+-------+----------+------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                    ;
++------------+-------+----------+------------------------------------------------------------+
+; mem_datain ; Input ; Info     ; Stuck at GND                                               ;
+; mem_wrbar  ; Input ; Info     ; Stuck at VCC                                               ;
++------------+-------+----------+------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "InstructionFetch:IF_instance_1|Bit_adder_8:B2"                                                      ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                 ; Type   ; Severity ; Details                                                                             ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; input_vector2[15..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; input_vector2[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; output_vector[16]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "InstructionFetch:IF_instance_1|Bit_adder_8:B1"                                                      ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                 ; Type   ; Severity ; Details                                                                             ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; input_vector2[15..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; input_vector2[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; output_vector[16]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon Dec  2 19:34:51 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Bonus_Implementation -c Bonus_Implementation
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file Scheduler.vhdl
+    Info (12022): Found design unit 1: Scheduler-FML File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Scheduler.vhdl Line: 27
+    Info (12023): Found entity 1: Scheduler File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Scheduler.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file Qu.vhdl
+    Info (12022): Found design unit 1: Qu-UglyCode File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl Line: 38
+    Info (12023): Found entity 1: Qu File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file WriteBack (1).vhdl
+    Info (12022): Found design unit 1: WriteBack-WB File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/WriteBack (1).vhdl Line: 22
+    Info (12023): Found entity 1: WriteBack File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/WriteBack (1).vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file TopLevel.vhdl
+    Info (12022): Found design unit 1: TopLevel-Project1 File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 8
+    Info (12023): Found entity 1: TopLevel File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file SixteenBitAdder.vhdl
+    Info (12022): Found design unit 1: Bit_adder_1-Addition File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/SixteenBitAdder.vhdl Line: 14
+    Info (12023): Found entity 1: Bit_adder_1 File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/SixteenBitAdder.vhdl Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file RF.vhdl
+    Info (12022): Found design unit 1: RF-Wrk File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RF.vhdl Line: 38
+    Info (12023): Found entity 1: RF File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RF.vhdl Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file RegisterRead.vhdl
+    Info (12022): Found design unit 1: RegisterRead-RR File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RegisterRead.vhdl Line: 23
+    Info (12023): Found entity 1: RegisterRead File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RegisterRead.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file MemoryAccess.vhdl
+    Info (12022): Found design unit 1: MemoryAccess-stage_mem File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/MemoryAccess.vhdl Line: 32
+    Info (12023): Found entity 1: MemoryAccess File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/MemoryAccess.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Memory_Data.vhdl
+    Info (12022): Found design unit 1: Memory_Data-ARC File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_Data.vhdl Line: 18
+    Info (12023): Found entity 1: Memory_Data File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_Data.vhdl Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file Memory_asyncread_syncwrite.vhdl.vhd
+    Info (12022): Found design unit 1: Memory_asyncread_syncwrite-Form File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_asyncread_syncwrite.vhdl.vhd Line: 18
+    Info (12023): Found entity 1: Memory_asyncread_syncwrite File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_asyncread_syncwrite.vhdl.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file InstructionFetch.vhdl
+    Info (12022): Found design unit 1: InstructionFetch-IR File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionFetch.vhdl Line: 12
+    Info (12023): Found entity 1: InstructionFetch File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionFetch.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file InstructionDecode.vhdl
+    Info (12022): Found design unit 1: InstructionDecode-decode File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl Line: 32
+    Info (12023): Found entity 1: InstructionDecode File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file HazardDetectionUnit.vhd
+    Info (12022): Found design unit 1: HazardDetectionUnit-SpaghettiCode File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/HazardDetectionUnit.vhd Line: 17
+    Info (12023): Found entity 1: HazardDetectionUnit File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/HazardDetectionUnit.vhd Line: 5
+Info (12021): Found 19 design units, including 9 entities, in source file Gates.vhdl
+    Info (12022): Found design unit 1: Gates File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 3
+    Info (12022): Found design unit 2: INVERTER-Equations File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 54
+    Info (12022): Found design unit 3: AND_2-Equations File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 66
+    Info (12022): Found design unit 4: NAND_2-Equations File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 77
+    Info (12022): Found design unit 5: OR_2-Equations File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 88
+    Info (12022): Found design unit 6: NOR_2-Equations File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 99
+    Info (12022): Found design unit 7: XOR_2-Equations File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 111
+    Info (12022): Found design unit 8: XNOR_2-Equations File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 122
+    Info (12022): Found design unit 9: HALF_ADDER-Equations File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 133
+    Info (12022): Found design unit 10: INVERTER_VECTOR-Equations File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 147
+    Info (12023): Found entity 1: INVERTER File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 50
+    Info (12023): Found entity 2: AND_2 File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 62
+    Info (12023): Found entity 3: NAND_2 File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 73
+    Info (12023): Found entity 4: OR_2 File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 84
+    Info (12023): Found entity 5: NOR_2 File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 95
+    Info (12023): Found entity 6: XOR_2 File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 107
+    Info (12023): Found entity 7: XNOR_2 File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 118
+    Info (12023): Found entity 8: HALF_ADDER File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 129
+    Info (12023): Found entity 9: INVERTER_VECTOR File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl Line: 143
+Info (12021): Found 2 design units, including 1 entities, in source file Full_Adder.vhdl
+    Info (12022): Found design unit 1: Full_Adder-Struct File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Full_Adder.vhdl Line: 10
+    Info (12023): Found entity 1: Full_Adder File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Full_Adder.vhdl Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file ExecutionTasks.vhdl
+    Info (12022): Found design unit 1: ExecutionTasks-OT File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 35
+    Info (12023): Found entity 1: ExecutionTasks File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Encoder.vhdl
+    Info (12022): Found design unit 1: eightToThreeEnc-str File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Encoder.vhdl Line: 11
+    Info (12023): Found entity 1: eightToThreeEnc File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Encoder.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file EightBitAdder.vhdl
+    Info (12022): Found design unit 1: Bit_adder_8-Addition File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/EightBitAdder.vhdl Line: 13
+    Info (12023): Found entity 1: Bit_adder_8 File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/EightBitAdder.vhdl Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file Decoder.vhdl
+    Info (12022): Found design unit 1: threeToeight_Decoder-decode File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl Line: 11
+    Info (12023): Found entity 1: threeToeight_Decoder File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file BitwiseNand.vhdl
+    Info (12022): Found design unit 1: BitwiseNand-fn1 File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/BitwiseNand.vhdl Line: 11
+    Info (12023): Found entity 1: BitwiseNand File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/BitwiseNand.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ALU.vhdl
+    Info (12022): Found design unit 1: ALU-FinalWork File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ALU.vhdl Line: 18
+    Info (12023): Found entity 1: ALU File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ALU.vhdl Line: 6
+Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(195): object "R0" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 195
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(195): object "R1" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 195
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(195): object "R2" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 195
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(195): object "R3" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 195
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(195): object "R4" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 195
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(195): object "R5" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 195
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(195): object "R6" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 195
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(195): object "R7" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 195
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(216): object "out_normal_jump_1_d" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 216
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(216): object "out_prop_1_d" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 216
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(217): object "out_ls_enable_1_d" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 217
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(217): object "out_zero_flag_1_d" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 217
+Warning (10541): VHDL Signal Declaration warning at TopLevel.vhdl(219): used implicit default value for signal "sm_lm_mux_control_1_d" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 219
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(222): object "out_normal_jump_2_d" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 222
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(222): object "out_prop_2_d" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 222
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(223): object "out_ls_enable_2_d" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 223
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(223): object "out_zero_flag_2_d" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 223
+Warning (10541): VHDL Signal Declaration warning at TopLevel.vhdl(225): used implicit default value for signal "sm_lm_mux_control_2_d" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 225
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(231): object "overflow_s" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 231
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(252): object "out_pc_1_e" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 252
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(254): object "beq_condn_bit_1_e" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 254
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(254): object "wr_c_bit_1_e" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 254
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(257): object "out_pc_2_e" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 257
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(259): object "beq_condn_bit_2_e" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 259
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(259): object "wr_c_bit_2_e" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 259
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(263): object "in_start_bit_1_e" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 263
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(263): object "in_start_bit_2_e" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 263
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(267): object "out_pc_m" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 267
+Warning (10541): VHDL Signal Declaration warning at TopLevel.vhdl(267): used implicit default value for signal "in_prop_m" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 267
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(268): object "zero_flag_out_m" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 268
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(270): object "out_r7_bit_m" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 270
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(271): object "in_start_bit_m" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 271
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(287): object "bmem_bwb3_ra" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 287
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(288): object "bex1_bwb3_ra" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 288
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(289): object "bex2_bwb3_ra" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 289
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(436): object "prop_if" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 436
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(436): object "prop_ex_1" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 436
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(436): object "prop_ex_2" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 436
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(436): object "prop_mem" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 436
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhdl(437): object "prop_ss" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 437
+Warning (10543): VHDL Variable Declaration warning at TopLevel.vhdl(459): used default initial value for variable "bmem_bwb3_ra_var" because variable was never assigned a value or an initial value expression. Use of default initial value may introduce unintended design optimizations. File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 459
+Warning (10543): VHDL Variable Declaration warning at TopLevel.vhdl(460): used default initial value for variable "bex1_bwb3_ra_var" because variable was never assigned a value or an initial value expression. Use of default initial value may introduce unintended design optimizations. File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 460
+Warning (10543): VHDL Variable Declaration warning at TopLevel.vhdl(461): used default initial value for variable "bex2_bwb3_ra_var" because variable was never assigned a value or an initial value expression. Use of default initial value may introduce unintended design optimizations. File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 461
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(490): signal "bmem_bwb1_ra" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 490
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(490): signal "RR_MEM_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 490
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(491): signal "bex1_bwb1_ra" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 491
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(491): signal "RR_MEM_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 491
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(492): signal "bex2_bwb1_ra" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 492
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(492): signal "RR_MEM_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 492
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(494): signal "bmem_bwb1_rb" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 494
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(494): signal "RR_MEM_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 494
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(495): signal "bex1_bwb1_rb" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 495
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(495): signal "RR_MEM_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 495
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(496): signal "bex2_bwb1_rb" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 496
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(496): signal "RR_MEM_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 496
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(498): signal "bmem_bwb2_ra" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 498
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(498): signal "RR_EX_1_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 498
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(499): signal "bex1_bwb2_ra" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 499
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(499): signal "RR_EX_1_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 499
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(500): signal "bex2_bwb2_ra" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 500
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(500): signal "RR_EX_1_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 500
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(502): signal "bmem_bwb2_rb" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 502
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(502): signal "RR_EX_1_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 502
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(503): signal "bex1_bwb2_rb" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 503
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(503): signal "RR_EX_1_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 503
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(504): signal "bex2_bwb2_rb" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 504
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(504): signal "RR_EX_1_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 504
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(506): signal "bmem_bwb2_ra" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 506
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(506): signal "RR_EX_1_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 506
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(507): signal "bex1_bwb2_ra" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 507
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(507): signal "RR_EX_1_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 507
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(508): signal "bex2_bwb2_ra" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 508
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(508): signal "RR_EX_1_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 508
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(510): signal "bmem_bwb3_rb" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 510
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(510): signal "RR_EX_2_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 510
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(511): signal "bex1_bwb3_rb" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 511
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(511): signal "RR_EX_2_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 511
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(512): signal "bex2_bwb3_rb" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 512
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(512): signal "RR_EX_2_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 512
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(515): signal "out_pc_inc_2_f" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 515
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(516): signal "in_prop_f" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 516
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(517): signal "IF_ID_1_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 517
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(518): signal "IF_ID_2_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 518
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(519): signal "valid_mask_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 519
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(520): signal "RR_EX_1_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 520
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(521): signal "RR_EX_2_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 521
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(522): signal "RR_MEM_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 522
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(524): signal "out_pc_1_f" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 524
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(525): signal "out_pc_inc_1_f" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 525
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(526): signal "out_instruction_1_f" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 526
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(527): signal "in_prop_f" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 527
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(528): signal "in_enable_f" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 528
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(529): signal "sm_lm_mux_control_1_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 529
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(531): signal "out_pc_2_f" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 531
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(532): signal "out_pc_inc_2_f" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 532
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(533): signal "out_instruction_2_f" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 533
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(534): signal "in_prop_f" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 534
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(535): signal "in_enable_f" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 535
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(536): signal "sm_lm_mux_control_2_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 536
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(538): signal "out_pc_1_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 538
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(539): signal "out_instruction_1_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 539
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(540): signal "out_pc_inc_1_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 540
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(541): signal "out_jump_add_1_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 541
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(542): signal "out_lsreg_a_1_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 542
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(543): signal "out_control_word_1_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 543
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(545): signal "out_start_bit_1_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 545
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(546): signal "jump_bit_1_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 546
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(548): signal "out_pc_2_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 548
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(549): signal "out_instruction_2_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 549
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(550): signal "out_pc_inc_2_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 550
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(551): signal "out_jump_add_2_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 551
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(552): signal "out_lsreg_a_2_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 552
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(553): signal "out_control_word_2_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 553
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(555): signal "out_start_bit_2_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 555
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(556): signal "jump_bit_2_d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 556
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(560): signal "r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 560
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(563): signal "out_data_1_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 563
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(564): signal "out_data_1_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 564
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(565): signal "out_data_2_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 565
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(566): signal "out_data_2_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 566
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(567): signal "out_data_3_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 567
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(568): signal "out_data_3_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 568
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(570): signal "out_data_1_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 570
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(571): signal "out_data_1_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 571
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(572): signal "out_data_1_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 572
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(573): signal "out_data_1_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 573
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(574): signal "out_data_2_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 574
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(575): signal "out_data_2_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 575
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(576): signal "out_data_2_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 576
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(577): signal "out_data_2_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 577
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(578): signal "out_data_3_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 578
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(579): signal "out_data_3_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 579
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(580): signal "out_data_3_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 580
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(581): signal "out_data_3_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 581
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(582): signal "out_data_1_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 582
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(583): signal "out_data_2_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 583
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(584): signal "out_data_3_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 584
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(585): signal "out_data_1_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 585
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(586): signal "out_data_2_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 586
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(587): signal "out_data_3_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 587
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(588): signal "out_data_1_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 588
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(589): signal "out_data_1_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 589
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(590): signal "out_data_2_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 590
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(591): signal "out_data_2_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 591
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(592): signal "out_data_3_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 592
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(593): signal "out_data_3_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 593
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(594): signal "r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 594
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(595): signal "out_data_1_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 595
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(596): signal "out_data_2_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 596
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(597): signal "out_data_3_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 597
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(599): signal "out_start_bit_2_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 599
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(600): signal "in_jump_bit_2_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 600
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(602): signal "out_pc_2_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 602
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(603): signal "out_pc_inc_2_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 603
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(604): signal "out_ra_2_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 604
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(605): signal "out_rb_2_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 605
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(606): signal "out_instruction_2_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 606
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(607): signal "out_control_word_2_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 607
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(608): signal "out_jump_add_2_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 608
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(609): signal "SS_RR_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 609
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(610): signal "SS_RR_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 610
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(611): signal "out_z_2_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 611
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(612): signal "out_c_2_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 612
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(613): signal "out_jump_add_2_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 613
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(615): signal "out_start_bit_3_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 615
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(616): signal "in_jump_bit_3_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 616
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(618): signal "out_pc_3_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 618
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(619): signal "out_pc_inc_3_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 619
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(620): signal "out_ra_3_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 620
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(621): signal "out_rb_3_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 621
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(622): signal "out_instruction_3_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 622
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(623): signal "out_control_word_3_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 623
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(624): signal "out_jump_add_3_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 624
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(625): signal "SS_RR_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 625
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(626): signal "SS_RR_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 626
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(627): signal "out_jump_add_3_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 627
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(630): signal "in_jump_bit_1_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 630
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(631): signal "out_start_bit_1_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 631
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(633): signal "out_ra_1_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 633
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(634): signal "out_rb_1_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 634
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(636): signal "out_jump_add_1_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 636
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(637): signal "out_pc_1_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 637
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(638): signal "out_pc_inc_1_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 638
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(640): signal "out_instruction_1_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 640
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(641): signal "out_control_word_1_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 641
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(642): signal "SS_RR_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 642
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(643): signal "SS_RR_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 643
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(644): signal "out_lsreg_a_1_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 644
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(645): signal "in_jump_bit_1_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 645
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(647): signal "in_jump_bit_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 647
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(648): signal "RR_MEM_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 648
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(649): signal "in_jump_bit_1_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 649
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(650): signal "RR_EX_1_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 650
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(651): signal "in_jump_bit_2_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 651
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(652): signal "RR_EX_2_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 652
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(655): signal "out_data_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 655
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(656): signal "alu_out_1_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 656
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(657): signal "alu_out_2_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 657
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(658): signal "out_pc_inc_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 658
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(659): signal "out_pc_inc_1_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 659
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(660): signal "out_pc_inc_2_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 660
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(661): signal "out_control_word_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 661
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(662): signal "out_instruction_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 662
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(663): signal "out_control_word_1_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 663
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(664): signal "out_instruction_1_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 664
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(665): signal "out_control_word_2_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 665
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(666): signal "out_instruction_2_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 666
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(667): signal "out_lm_sm_address_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 667
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(673): signal "RR_MEM_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 673
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(674): signal "RR_MEM_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 674
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(675): signal "RR_EX_1_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 675
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(676): signal "RR_EX_1_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 676
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(677): signal "RR_EX_2_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 677
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(678): signal "RR_EX_2_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 678
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(679): signal "out_prop_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 679
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(680): signal "out_prop_1_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 680
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(681): signal "out_prop_2_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 681
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(684): signal "out_data_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 684
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(687): signal "out_data_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 687
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(690): signal "out_data_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 690
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(694): signal "out_data_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 694
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(697): signal "out_data_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 697
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(700): signal "out_data_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 700
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(704): signal "alu_out_1_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 704
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(707): signal "alu_out_1_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 707
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(710): signal "alu_out_1_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 710
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(714): signal "alu_out_1_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 714
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(717): signal "alu_out_1_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 717
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(720): signal "alu_out_1_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 720
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(734): signal "alu_out_2_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 734
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(737): signal "alu_out_2_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 737
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(740): signal "alu_out_2_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 740
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(743): signal "in_jump_bit_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 743
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(743): signal "RR_MEM_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 743
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(744): signal "out_r7_bit_1_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 744
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(744): signal "RR_EX_1_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 744
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(745): signal "out_r7_bit_2_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 745
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(745): signal "RR_EX_2_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 745
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(747): signal "in_jump_bit_1_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 747
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(747): signal "SS_RR_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 747
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(748): signal "in_jump_bit_2_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 748
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(748): signal "SS_RR_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 748
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(749): signal "in_jump_bit_3_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 749
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(749): signal "SS_RR_interface" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 749
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(780): signal "out_data_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 780
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(784): signal "out_jump_add_1_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 784
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(788): signal "out_jump_add_2_e" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 788
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(791): signal "out_jump_add_1_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 791
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(794): signal "out_jump_add_2_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 794
+Warning (10492): VHDL Process Statement warning at TopLevel.vhdl(797): signal "out_jump_add_3_r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 797
+Warning (10873): Using initial value X (don't care) for net "IF_ID_1_interface[0]" at TopLevel.vhdl(198) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 198
+Warning (10873): Using initial value X (don't care) for net "IF_ID_2_interface[0]" at TopLevel.vhdl(199) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 199
+Info (12128): Elaborating entity "InstructionFetch" for hierarchy "InstructionFetch:IF_instance_1" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 303
+Info (12128): Elaborating entity "Bit_adder_8" for hierarchy "InstructionFetch:IF_instance_1|Bit_adder_8:B1" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionFetch.vhdl Line: 30
+Info (12128): Elaborating entity "HALF_ADDER" for hierarchy "InstructionFetch:IF_instance_1|Bit_adder_8:B1|HALF_ADDER:haa" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/EightBitAdder.vhdl Line: 27
+Info (12128): Elaborating entity "Full_Adder" for hierarchy "InstructionFetch:IF_instance_1|Bit_adder_8:B1|Full_Adder:add_instance_1" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/EightBitAdder.vhdl Line: 35
+Info (12128): Elaborating entity "Memory_asyncread_syncwrite" for hierarchy "InstructionFetch:IF_instance_1|Memory_asyncread_syncwrite:Mem1" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionFetch.vhdl Line: 42
+Info (12128): Elaborating entity "InstructionDecode" for hierarchy "InstructionDecode:ID_instance_1" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 308
+Info (10041): Inferred latch for "RegSelectImm[0]" at InstructionDecode.vhdl(94) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl Line: 94
+Info (10041): Inferred latch for "RegSelectImm[1]" at InstructionDecode.vhdl(94) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl Line: 94
+Info (10041): Inferred latch for "RegSelectImm[2]" at InstructionDecode.vhdl(94) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl Line: 94
+Info (10041): Inferred latch for "RegSelectImm[3]" at InstructionDecode.vhdl(94) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl Line: 94
+Info (10041): Inferred latch for "RegSelectImm[4]" at InstructionDecode.vhdl(94) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl Line: 94
+Info (10041): Inferred latch for "RegSelectImm[5]" at InstructionDecode.vhdl(94) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl Line: 94
+Info (10041): Inferred latch for "RegSelectImm[6]" at InstructionDecode.vhdl(94) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl Line: 94
+Info (10041): Inferred latch for "RegSelectImm[7]" at InstructionDecode.vhdl(94) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl Line: 94
+Info (12128): Elaborating entity "eightToThreeEnc" for hierarchy "InstructionDecode:ID_instance_1|eightToThreeEnc:Enc" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl Line: 107
+Info (12128): Elaborating entity "threeToeight_Decoder" for hierarchy "InstructionDecode:ID_instance_1|threeToeight_Decoder:Dec" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl Line: 110
+Info (10041): Inferred latch for "output_line1[0]" at Decoder.vhdl(15) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl Line: 15
+Info (10041): Inferred latch for "output_line1[1]" at Decoder.vhdl(15) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl Line: 15
+Info (10041): Inferred latch for "output_line1[2]" at Decoder.vhdl(15) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl Line: 15
+Info (10041): Inferred latch for "output_line1[3]" at Decoder.vhdl(15) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl Line: 15
+Info (10041): Inferred latch for "output_line1[4]" at Decoder.vhdl(15) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl Line: 15
+Info (10041): Inferred latch for "output_line1[5]" at Decoder.vhdl(15) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl Line: 15
+Info (10041): Inferred latch for "output_line1[6]" at Decoder.vhdl(15) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl Line: 15
+Info (10041): Inferred latch for "output_line1[7]" at Decoder.vhdl(15) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl Line: 15
+Info (12128): Elaborating entity "Bit_adder_1" for hierarchy "InstructionDecode:ID_instance_1|Bit_adder_1:Adder" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl Line: 113
+Info (12128): Elaborating entity "Scheduler" for hierarchy "Scheduler:SS_instance_1" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 320
+Warning (10541): VHDL Signal Declaration warning at Scheduler.vhdl(22): used implicit default value for signal "valid_mask" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Scheduler.vhdl Line: 22
+Warning (10036): Verilog HDL or VHDL warning at Scheduler.vhdl(68): object "underflow" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Scheduler.vhdl Line: 68
+Warning (10036): Verilog HDL or VHDL warning at Scheduler.vhdl(69): object "pop_num_out" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Scheduler.vhdl Line: 69
+Warning (10036): Verilog HDL or VHDL warning at Scheduler.vhdl(70): object "underflow_bits" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Scheduler.vhdl Line: 70
+Info (12128): Elaborating entity "Qu" for hierarchy "Scheduler:SS_instance_1|Qu:Q" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Scheduler.vhdl Line: 87
+Warning (10541): VHDL Signal Declaration warning at Qu.vhdl(28): used implicit default value for signal "overflow" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl Line: 28
+Warning (10036): Verilog HDL or VHDL warning at Qu.vhdl(43): object "TempNo" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl Line: 43
+Warning (10036): Verilog HDL or VHDL warning at Qu.vhdl(50): object "q_var" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl Line: 50
+Warning (10036): Verilog HDL or VHDL warning at Qu.vhdl(67): object "nOverflow" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl Line: 67
+Warning (10036): Verilog HDL or VHDL warning at Qu.vhdl(69): object "nout_data_1" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl Line: 69
+Warning (10036): Verilog HDL or VHDL warning at Qu.vhdl(70): object "nout_data_2" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl Line: 70
+Warning (10036): Verilog HDL or VHDL warning at Qu.vhdl(71): object "nout_data_3" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl Line: 71
+Warning (10492): VHDL Process Statement warning at Qu.vhdl(81): signal "RegisterNo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl Line: 81
+Info (12128): Elaborating entity "HazardDetectionUnit" for hierarchy "Scheduler:SS_instance_1|HazardDetectionUnit:HD_instance1" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Scheduler.vhdl Line: 90
+Info (12128): Elaborating entity "RegisterRead" for hierarchy "RegisterRead:RR_instance_1" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 327
+Warning (10036): Verilog HDL or VHDL warning at RegisterRead.vhdl(63): object "wr_pc_inc" assigned a value but never read File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RegisterRead.vhdl Line: 63
+Info (12128): Elaborating entity "RF" for hierarchy "RegisterRead:RR_instance_1|RF:RF1" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RegisterRead.vhdl Line: 140
+Info (12128): Elaborating entity "ExecutionTasks" for hierarchy "ExecutionTasks:EX_instance_1" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 351
+Info (10041): Inferred latch for "jump_temp[0]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (10041): Inferred latch for "jump_temp[1]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (10041): Inferred latch for "jump_temp[2]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (10041): Inferred latch for "jump_temp[3]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (10041): Inferred latch for "jump_temp[4]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (10041): Inferred latch for "jump_temp[5]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (10041): Inferred latch for "jump_temp[6]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (10041): Inferred latch for "jump_temp[7]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (10041): Inferred latch for "jump_temp[8]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (10041): Inferred latch for "jump_temp[9]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (10041): Inferred latch for "jump_temp[10]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (10041): Inferred latch for "jump_temp[11]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (10041): Inferred latch for "jump_temp[12]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (10041): Inferred latch for "jump_temp[13]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (10041): Inferred latch for "jump_temp[14]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (10041): Inferred latch for "jump_temp[15]" at ExecutionTasks.vhdl(70) File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 70
+Info (12128): Elaborating entity "ALU" for hierarchy "ExecutionTasks:EX_instance_1|ALU:Alu1" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl Line: 98
+Info (12128): Elaborating entity "BitwiseNand" for hierarchy "ExecutionTasks:EX_instance_1|ALU:Alu1|BitwiseNand:B2" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ALU.vhdl Line: 43
+Info (12128): Elaborating entity "MemoryAccess" for hierarchy "MemoryAccess:MEM_instance_1" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 370
+Info (12128): Elaborating entity "Memory_Data" for hierarchy "MemoryAccess:MEM_instance_1|Memory_Data:Mem_data" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/MemoryAccess.vhdl Line: 66
+Info (12128): Elaborating entity "WriteBack" for hierarchy "WriteBack:WB_instance_1" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 379
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "r" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 5
+    Warning (15610): No output dependent on input pin "clk" File: /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl Line: 5
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 269 warnings
+    Info: Peak virtual memory: 968 megabytes
+    Info: Processing ended: Mon Dec  2 19:35:08 2019
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:42
+
+

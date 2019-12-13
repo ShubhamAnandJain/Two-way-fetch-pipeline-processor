@@ -1,0 +1,1196 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/simulation/modelsim
+Ealu
+Z1 w1572894960
+Z2 DPx4 work 5 gates 0 22 `:<V;8GSU=ZMKg:6g6_^H2
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ALU.vhdl
+Z6 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ALU.vhdl
+l0
+L6
+V0Y_JQ@G6kN:]6MlZ;@e7F3
+!s100 BZM3>QHfikRgH3W[7V^<D0
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1575295518
+!i10b 1
+Z9 !s108 1575295518.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ALU.vhdl|
+Z11 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ALU.vhdl|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Afinalwork
+R2
+R3
+R4
+DEx4 work 3 alu 0 22 0Y_JQ@G6kN:]6MlZ;@e7F3
+l38
+L18
+V^5`SCFM_UD]BbbSgb_fXU3
+!s100 ]_LKeR7lCSYojL2ZNIk_F1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eand_2
+R1
+R3
+R4
+R0
+Z14 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl
+Z15 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl
+l0
+L62
+VYT]I=5mGIAZWQUI:P2CIa0
+!s100 6nAdW8j4d04HV@1jQJ_2?3
+R7
+31
+R8
+!i10b 1
+Z16 !s108 1575295517.000000
+Z17 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl|
+Z18 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl|
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 5 and_2 0 22 YT]I=5mGIAZWQUI:P2CIa0
+l67
+L66
+V>EBIV20h;]XCD9LQ6Ln6P2
+!s100 _:8=JEZjzB];7S>o=f5za2
+R7
+31
+R8
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Ebit_adder_1
+R1
+R3
+R4
+R0
+Z19 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/SixteenBitAdder.vhdl
+Z20 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/SixteenBitAdder.vhdl
+l0
+L7
+VBV4zC@LZ=>C:OY6^Sfa@63
+!s100 >]1IRT;E>Sn<Of1gUR]<_1
+R7
+31
+Z21 !s110 1575295517
+!i10b 1
+R16
+Z22 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/SixteenBitAdder.vhdl|
+Z23 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/SixteenBitAdder.vhdl|
+!i113 1
+R12
+R13
+Aaddition
+R3
+R4
+DEx4 work 11 bit_adder_1 0 22 BV4zC@LZ=>C:OY6^Sfa@63
+l24
+L14
+Vm^APLdKIG3hW71obfC?3R3
+!s100 m4bB28UK8UcbF4T@hU6dm1
+R7
+31
+R21
+!i10b 1
+R16
+R22
+R23
+!i113 1
+R12
+R13
+Ebit_adder_8
+Z24 w1572969778
+R3
+R4
+R0
+Z25 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/EightBitAdder.vhdl
+Z26 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/EightBitAdder.vhdl
+l0
+L7
+V8FNCZgnP0>M[Nedz?1;m31
+!s100 9CaE4@Uio@TAQbZ]emzGS3
+R7
+31
+R8
+!i10b 1
+R9
+Z27 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/EightBitAdder.vhdl|
+Z28 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/EightBitAdder.vhdl|
+!i113 1
+R12
+R13
+Aaddition
+R3
+R4
+DEx4 work 11 bit_adder_8 0 22 8FNCZgnP0>M[Nedz?1;m31
+l23
+L13
+V1JPWfDo<B;`U:0n5hO:Zi3
+!s100 Dh]Um18MhmFOOmo2Xa@lP2
+R7
+31
+R8
+!i10b 1
+R9
+R27
+R28
+!i113 1
+R12
+R13
+Ebitwisenand
+R1
+R3
+R4
+R0
+Z29 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/BitwiseNand.vhdl
+Z30 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/BitwiseNand.vhdl
+l0
+L4
+VcXPJWD?8;_4M6dGZIe2o<2
+!s100 T^X?F6WAMR700[m]5>GP70
+R7
+31
+R8
+!i10b 1
+R9
+Z31 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/BitwiseNand.vhdl|
+Z32 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/BitwiseNand.vhdl|
+!i113 1
+R12
+R13
+Afn1
+R3
+R4
+DEx4 work 11 bitwisenand 0 22 cXPJWD?8;_4M6dGZIe2o<2
+l13
+L11
+VjiH^^NRYK77jmlgQHVl4R3
+!s100 hA;1g[32j1Y<?DYC<H@jH0
+R7
+31
+R8
+!i10b 1
+R9
+R31
+R32
+!i113 1
+R12
+R13
+Eeighttothreeenc
+R1
+R3
+R4
+R0
+Z33 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Encoder.vhdl
+Z34 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Encoder.vhdl
+l0
+L4
+V08SU8;N^FVPgJCGfF31X>0
+!s100 ZDR[FiHD2L]hZLhdUCJA[3
+R7
+31
+R8
+!i10b 1
+R9
+Z35 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Encoder.vhdl|
+Z36 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Encoder.vhdl|
+!i113 1
+R12
+R13
+Astr
+R3
+R4
+DEx4 work 15 eighttothreeenc 0 22 08SU8;N^FVPgJCGfF31X>0
+l13
+L11
+VYlQ3jYXXjhF<R9Kd`Cd=20
+!s100 7o6JIN0IK:F7nM4_^b<<P3
+R7
+31
+R8
+!i10b 1
+R9
+R35
+R36
+!i113 1
+R12
+R13
+Eexecutiontasks
+Z37 w1575152578
+R3
+R4
+R0
+Z38 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl
+Z39 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl
+l0
+L5
+Vdg:`MR?i?je_Tmbl9Xm[S0
+!s100 R>::O3Se>Jj]g3HgG1;4M1
+R7
+31
+R8
+!i10b 1
+R9
+Z40 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl|
+Z41 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl|
+!i113 1
+R12
+R13
+Aot
+R3
+R4
+DEx4 work 14 executiontasks 0 22 dg:`MR?i?je_Tmbl9Xm[S0
+l58
+L35
+V=Y02lC?TjhYj;a;U8f7<`0
+!s100 l0c69Ee691];n`c=HWZ6g2
+R7
+31
+R8
+!i10b 1
+R9
+R40
+R41
+!i113 1
+R12
+R13
+Efull_adder
+R1
+R2
+R3
+R4
+R0
+Z42 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Full_Adder.vhdl
+Z43 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Full_Adder.vhdl
+l0
+L7
+V_S=WZ8fFSSGS0G<9Do9HR0
+!s100 H=:zT=46zo28lmNL^=N@g0
+R7
+31
+R8
+!i10b 1
+R9
+Z44 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Full_Adder.vhdl|
+Z45 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Full_Adder.vhdl|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 10 full_adder 0 22 _S=WZ8fFSSGS0G<9Do9HR0
+l12
+L10
+VzXDAh[XZhclAa_;bzB1AB0
+!s100 ca2NFDMYiN:ffm[G]lD]e0
+R7
+31
+R8
+!i10b 1
+R9
+R44
+R45
+!i113 1
+R12
+R13
+Pgates
+R3
+R4
+R1
+R0
+R14
+R15
+l0
+L3
+V`:<V;8GSU=ZMKg:6g6_^H2
+!s100 [[g>Ybb>ozP]>d>k`Li^Q2
+R7
+31
+R21
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Ehalf_adder
+R1
+R3
+R4
+R0
+R14
+R15
+l0
+L129
+V>O9AaU5gnSf9RN@8k;5IQ1
+!s100 X2TS[gBgnS;eQbFaGH7On0
+R7
+31
+R8
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 10 half_adder 0 22 >O9AaU5gnSf9RN@8k;5IQ1
+l134
+L133
+V::PlJ2Y`6SD=CUXNd`]Z:2
+!s100 KX7g3N?:ZhP;PU]1Ie0k02
+R7
+31
+R8
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Ehazarddetectionunit
+Z46 w1575289232
+R3
+R4
+R0
+Z47 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/HazardDetectionUnit.vhd
+Z48 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/HazardDetectionUnit.vhd
+l0
+L5
+VLF37X05m=mCLhTjZn2@Q00
+!s100 :n;iUzOD[8F?WgKc63ALm1
+R7
+31
+R21
+!i10b 1
+R16
+Z49 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/HazardDetectionUnit.vhd|
+Z50 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/HazardDetectionUnit.vhd|
+!i113 1
+R12
+R13
+Aspaghetticode
+R3
+R4
+DEx4 work 19 hazarddetectionunit 0 22 LF37X05m=mCLhTjZn2@Q00
+l30
+L17
+VB8YFjUO?MA7kYm0AKdP7G1
+!s100 kX<CVj^4;1JX8c<AlWZkf2
+R7
+31
+R21
+!i10b 1
+R16
+R49
+R50
+!i113 1
+R12
+R13
+Einstructiondecode
+Z51 w1575284044
+Z52 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R3
+R4
+R0
+Z53 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl
+Z54 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl
+l0
+L5
+VX??n]d[YCb37LQZDUNcFG1
+!s100 cSQn=nbd8C3hBjzAN;g^Z1
+R7
+31
+R21
+!i10b 1
+R16
+Z55 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl|
+Z56 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl|
+!i113 1
+R12
+R13
+Adecode
+R52
+R3
+R4
+DEx4 work 17 instructiondecode 0 22 X??n]d[YCb37LQZDUNcFG1
+l62
+L32
+V5Lc4jl^1A:Yf5g[C[_4Qa1
+!s100 >0bJn=[zjXoe:OK^d6AdB3
+R7
+31
+R21
+!i10b 1
+R16
+R55
+R56
+!i113 1
+R12
+R13
+Einstructionfetch
+Z57 w1574767320
+R2
+R3
+R4
+R0
+Z58 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionFetch.vhdl
+Z59 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionFetch.vhdl
+l0
+L6
+V[dUFkf<^H>^lN1ihk<VP^2
+!s100 2WDF3^P]NLE;z>]I]2iJ>1
+R7
+31
+R8
+!i10b 1
+R9
+Z60 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionFetch.vhdl|
+Z61 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionFetch.vhdl|
+!i113 1
+R12
+R13
+Air
+R2
+R3
+R4
+DEx4 work 16 instructionfetch 0 22 [dUFkf<^H>^lN1ihk<VP^2
+l28
+L12
+VYA^3H9_adad>^LCm<k:Ri3
+!s100 5eajKl4;4FQIkLc;hgVkG0
+R7
+31
+R8
+!i10b 1
+R9
+R60
+R61
+!i113 1
+R12
+R13
+Einverter
+R1
+R3
+R4
+R0
+R14
+R15
+l0
+L50
+V=^6O@ILjTT?7RZ7;VWlZj1
+!s100 BT8GdiDdU_:z8>nUPYZ<]0
+R7
+31
+R21
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 8 inverter 0 22 =^6O@ILjTT?7RZ7;VWlZj1
+l55
+L54
+VSYXI@Y<kkiR>M<^`N>KWP2
+!s100 =:R`;[Rh=]bFdUC3hG:ha1
+R7
+31
+R21
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Einverter_vector
+R1
+R3
+R4
+R0
+R14
+R15
+l0
+L143
+VC?a2Hi1`;BVbn6G[N]k=]2
+!s100 8AfJg86Xb`Be_97YDYAWQ2
+R7
+31
+R8
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 15 inverter_vector 0 22 C?a2Hi1`;BVbn6G[N]k=]2
+l148
+L147
+VMBAag^^2PTLNe<TDa>=T^1
+!s100 E]TnRFiWSfk=hkB8PXzkX1
+R7
+31
+R8
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Ememory_asyncread_syncwrite
+Z62 w1575288980
+Z63 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z64 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R52
+R3
+R4
+R0
+Z65 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_asyncread_syncwrite.vhdl.vhd
+Z66 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_asyncread_syncwrite.vhdl.vhd
+l0
+L13
+VEL9``WR?a1zJG2SeWoj9g2
+!s100 eJS2PV?Ha^M?3`Q1MCkYF2
+R7
+31
+R21
+!i10b 1
+R16
+Z67 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_asyncread_syncwrite.vhdl.vhd|
+Z68 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_asyncread_syncwrite.vhdl.vhd|
+!i113 1
+R12
+R13
+Aform
+R63
+R64
+R52
+R3
+R4
+DEx4 work 26 memory_asyncread_syncwrite 0 22 EL9``WR?a1zJG2SeWoj9g2
+l53
+L18
+VZ_Mn6K:AoORVd6z8C]Dje0
+!s100 L_P7d`7OzYnDf`h37TKbF1
+R7
+31
+R21
+!i10b 1
+R16
+R67
+R68
+!i113 1
+R12
+R13
+Ememory_data
+Z69 w1575276146
+R63
+R64
+R52
+R3
+R4
+R0
+Z70 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_Data.vhdl
+Z71 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_Data.vhdl
+l0
+L13
+VTWAZZIkV8:O^cn1Rh=Xzn2
+!s100 GgRkKW>CVc5E4DICbeWlH1
+R7
+31
+R21
+!i10b 1
+R16
+Z72 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_Data.vhdl|
+Z73 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_Data.vhdl|
+!i113 1
+R12
+R13
+Aarc
+R63
+R64
+R52
+R3
+R4
+DEx4 work 11 memory_data 0 22 TWAZZIkV8:O^cn1Rh=Xzn2
+l1047
+L18
+VAl=[@omIWaR4>FM:oS5Ez0
+!s100 k7`KXVj6mffh?mHD^5;A`3
+R7
+31
+R21
+!i10b 1
+R16
+R72
+R73
+!i113 1
+R12
+R13
+Ememoryaccess
+Z74 w1575193475
+R3
+R4
+R0
+Z75 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/MemoryAccess.vhdl
+Z76 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/MemoryAccess.vhdl
+l0
+L5
+V6>J:JZ_Kh8_50_N2d?>0M3
+!s100 P5bG@?kc5jLSEgl8YAWXI3
+R7
+31
+R21
+!i10b 1
+R16
+Z77 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/MemoryAccess.vhdl|
+Z78 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/MemoryAccess.vhdl|
+!i113 1
+R12
+R13
+Astage_mem
+R3
+R4
+DEx4 work 12 memoryaccess 0 22 6>J:JZ_Kh8_50_N2d?>0M3
+l51
+L32
+Vn:i5WnSDB2OOBz]HOGkV80
+!s100 ;Z`QonE9<cWnijLR3>G`o1
+R7
+31
+R21
+!i10b 1
+R16
+R77
+R78
+!i113 1
+R12
+R13
+Enand_2
+R1
+R3
+R4
+R0
+R14
+R15
+l0
+L73
+VL5JFz7h>2a3d7eM0b^m:B3
+!s100 f=`4b?ce;R9BdWLWAO?B30
+R7
+31
+R8
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 6 nand_2 0 22 L5JFz7h>2a3d7eM0b^m:B3
+l78
+L77
+VR>2Q;`>XU2VAb5;WnM@?M1
+!s100 eW28VZW^>zSb6R4TPkzOd2
+R7
+31
+R8
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Enor_2
+R1
+R3
+R4
+R0
+R14
+R15
+l0
+L95
+V2BIbCnZ?[R@^N^@DaCl1R3
+!s100 XQR>in?T40LY_4dHQa=TX1
+R7
+31
+R8
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 5 nor_2 0 22 2BIbCnZ?[R@^N^@DaCl1R3
+l100
+L99
+VRLOeLCek]EX5TB7SFK1P:0
+!s100 :4BTQIPLRlfH>;9^b7?JF1
+R7
+31
+R8
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Eor_2
+R1
+R3
+R4
+R0
+R14
+R15
+l0
+L84
+VX8hUVFzghKY7n;LWfRe`Y2
+!s100 iNnVk]]@:00IRF1F5MK5j0
+R7
+31
+R8
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 4 or_2 0 22 X8hUVFzghKY7n;LWfRe`Y2
+l89
+L88
+Vzf;o8KoWCZ4[>k2nNbARd3
+!s100 W5`gB5z=Q^L4l4i>=3Yjn1
+R7
+31
+R8
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Equ
+Z79 w1575215464
+R52
+R3
+R4
+R0
+Z80 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl
+Z81 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl
+l0
+L6
+V`z=gGZ1OMBBbbI:LZ]`Nm3
+!s100 =jXWTN=eGo3oB=d1KdRDg1
+R7
+31
+R21
+!i10b 1
+R16
+Z82 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl|
+Z83 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl|
+!i113 1
+R12
+R13
+Auglycode
+R52
+R3
+R4
+DEx4 work 2 qu 0 22 `z=gGZ1OMBBbbI:LZ]`Nm3
+l52
+L38
+VR[:<k]iLA>Ae2dFTaae9g0
+!s100 JNAD<ij^ZOT3F;J1TA1V<3
+R7
+31
+R21
+!i10b 1
+R16
+R82
+R83
+!i113 1
+R12
+R13
+Eregisterread
+Z84 w1575119856
+R2
+R3
+R4
+R0
+Z85 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RegisterRead.vhdl
+Z86 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RegisterRead.vhdl
+l0
+L6
+VePBhAP`@@e6jNC6a7SUz[1
+!s100 OzW[34KWNU7Tc?;jim<WL3
+R7
+31
+R8
+!i10b 1
+R9
+Z87 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RegisterRead.vhdl|
+Z88 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RegisterRead.vhdl|
+!i113 1
+R12
+R13
+Arr
+R2
+R3
+R4
+DEx4 work 12 registerread 0 22 ePBhAP`@@e6jNC6a7SUz[1
+l67
+L23
+Vk69G=mQlhX`9E@FWg9KLC1
+!s100 j^^Cn?U:hMcd7]LZN7keb0
+R7
+31
+R8
+!i10b 1
+R9
+R87
+R88
+!i113 1
+R12
+R13
+Erf
+Z89 w1575119850
+R63
+R64
+R52
+R3
+R4
+R0
+Z90 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RF.vhdl
+Z91 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RF.vhdl
+l0
+L9
+VYXl<jf7:UKFiA]@1<JbF02
+!s100 M<eS]R>6OEI;4f:X3iLQA1
+R7
+31
+R21
+!i10b 1
+R16
+Z92 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RF.vhdl|
+Z93 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RF.vhdl|
+!i113 1
+R12
+R13
+Awrk
+R63
+R64
+R52
+R3
+R4
+DEx4 work 2 rf 0 22 YXl<jf7:UKFiA]@1<JbF02
+l47
+L38
+VLLkU^Re6bl^mlfi:1aaRz0
+!s100 3^K_FH;_JN[9AZ^:SCnKh2
+R7
+31
+R21
+!i10b 1
+R16
+R92
+R93
+!i113 1
+R12
+R13
+Escheduler
+Z94 w1575215312
+R52
+R3
+R4
+R0
+Z95 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Scheduler.vhdl
+Z96 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Scheduler.vhdl
+l0
+L6
+VIlI_eD1XSlz?KMe76Kfa02
+!s100 ck[TbMJjo6;SVk32VD57d3
+R7
+31
+R21
+!i10b 1
+R16
+Z97 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Scheduler.vhdl|
+Z98 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Scheduler.vhdl|
+!i113 1
+R12
+R13
+Afml
+R52
+R3
+R4
+DEx4 work 9 scheduler 0 22 IlI_eD1XSlz?KMe76Kfa02
+l82
+L27
+V:TjH40PHDNon=haeAzn@43
+!s100 5O@Gli4o?K2<5AIj>SdNc0
+R7
+31
+R21
+!i10b 1
+R16
+R97
+R98
+!i113 1
+R12
+R13
+Ethreetoeight_decoder
+R1
+R3
+R4
+R0
+Z99 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl
+Z100 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl
+l0
+L4
+Vhk9zUZIY]l6GXPA2^cP4F0
+!s100 jZAjBOhc9`m>Ge=:XfQ:X1
+R7
+31
+R8
+!i10b 1
+R9
+Z101 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl|
+Z102 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl|
+!i113 1
+R12
+R13
+Adecode
+R3
+R4
+DEx4 work 20 threetoeight_decoder 0 22 hk9zUZIY]l6GXPA2^cP4F0
+l13
+L11
+V`YFG0m_=EQJC0O2do^1dU2
+!s100 V;JY[JK6Al^34aM?a20VG2
+R7
+31
+R8
+!i10b 1
+R9
+R101
+R102
+!i113 1
+R12
+R13
+Etoplevel
+Z103 w1575295488
+R3
+R4
+R0
+Z104 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl
+Z105 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl
+l0
+L4
+V4Y@MoZ2>k`6O4Jn=eGo>U1
+!s100 5j7kT8B73?iI[1W8mz:d63
+R7
+31
+R21
+!i10b 1
+R16
+Z106 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl|
+Z107 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl|
+!i113 1
+R12
+R13
+Aproject1
+R3
+R4
+DEx4 work 8 toplevel 0 22 4Y@MoZ2>k`6O4Jn=eGo>U1
+l299
+L8
+Vg5`G_`[Q5UR:8b:SL=b543
+!s100 j>BLOOgHdHiEfW^=jR>^<3
+R7
+31
+R21
+!i10b 1
+R16
+R106
+R107
+!i113 1
+R12
+R13
+Ewriteback
+Z108 w1575152956
+R2
+R3
+R4
+R0
+Z109 8/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/WriteBack (1).vhdl
+Z110 F/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/WriteBack (1).vhdl
+l0
+L6
+V[8jFkITIi9H_F3;65IRdE2
+!s100 izhnUS[X[V8EHb6GnSe>?1
+R7
+31
+R8
+!i10b 1
+R9
+Z111 !s90 -reportprogress|300|-93|-work|work|/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/WriteBack (1).vhdl|
+Z112 !s107 /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/WriteBack (1).vhdl|
+!i113 1
+R12
+R13
+Awb
+R2
+R3
+R4
+DEx4 work 9 writeback 0 22 [8jFkITIi9H_F3;65IRdE2
+l29
+L22
+V9I;0`ckn@m:aP41W74D4I1
+!s100 TXeEJBAlE_5Klf]gK?DLS0
+R7
+31
+R8
+!i10b 1
+R9
+R111
+R112
+!i113 1
+R12
+R13
+Exnor_2
+R1
+R3
+R4
+R0
+R14
+R15
+l0
+L118
+Vj:7YT`@4S5`LeUF`oGYYZ2
+!s100 [:EO4`l_nM`;TEeEVi9Cc1
+R7
+31
+R8
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 6 xnor_2 0 22 j:7YT`@4S5`LeUF`oGYYZ2
+l123
+L122
+Va@dPkTRonlTeR57L7nO`R3
+!s100 34K_QkUKMhn]eh;dh9cBh2
+R7
+31
+R8
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Exor_2
+R1
+R3
+R4
+R0
+R14
+R15
+l0
+L107
+VVfGoPZc=Pz^Fl@ZD^aGbc3
+!s100 9AWZi9h5iBGe0D_NF[g2m2
+R7
+31
+R8
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 5 xor_2 0 22 VfGoPZc=Pz^Fl@ZD^aGbc3
+l112
+L111
+VCoHi;N<7kQh2Y6[KlNW:h3
+!s100 07ZWKEVTKSUINkMk6oSWh3
+R7
+31
+R8
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R12
+R13

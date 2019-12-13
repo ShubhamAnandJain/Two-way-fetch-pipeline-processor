@@ -1,0 +1,589 @@
+# do Bonus_Implementation_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying /home/titasc/intelFPGA_lite/18.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Scheduler.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:17 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Scheduler.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Scheduler
+# -- Compiling architecture FML of Scheduler
+# End time: 19:35:17 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:17 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Qu.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Qu
+# -- Compiling architecture UglyCode of Qu
+# End time: 19:35:17 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:17 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/TopLevel.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TopLevel
+# -- Compiling architecture Project1 of TopLevel
+# End time: 19:35:17 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/SixteenBitAdder.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:17 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/SixteenBitAdder.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Bit_adder_1
+# -- Compiling architecture Addition of Bit_adder_1
+# End time: 19:35:17 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RF.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:17 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RF.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity RF
+# -- Compiling architecture Wrk of RF
+# End time: 19:35:17 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/MemoryAccess.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:17 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/MemoryAccess.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MemoryAccess
+# -- Compiling architecture stage_mem of MemoryAccess
+# End time: 19:35:17 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_Data.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:17 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_Data.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity Memory_Data
+# -- Compiling architecture ARC of Memory_Data
+# End time: 19:35:17 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_asyncread_syncwrite.vhdl.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:17 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Memory_asyncread_syncwrite.vhdl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity Memory_asyncread_syncwrite
+# -- Compiling architecture Form of Memory_asyncread_syncwrite
+# End time: 19:35:17 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:17 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionDecode.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity InstructionDecode
+# -- Compiling architecture decode of InstructionDecode
+# End time: 19:35:17 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/HazardDetectionUnit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:17 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/HazardDetectionUnit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity HazardDetectionUnit
+# -- Compiling architecture SpaghettiCode of HazardDetectionUnit
+# End time: 19:35:17 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:17 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Gates.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package Gates
+# -- Compiling entity INVERTER
+# -- Compiling architecture Equations of INVERTER
+# -- Compiling entity AND_2
+# -- Compiling architecture Equations of AND_2
+# -- Compiling entity NAND_2
+# -- Compiling architecture Equations of NAND_2
+# -- Compiling entity OR_2
+# -- Compiling architecture Equations of OR_2
+# -- Compiling entity NOR_2
+# -- Compiling architecture Equations of NOR_2
+# -- Compiling entity XOR_2
+# -- Compiling architecture Equations of XOR_2
+# -- Compiling entity XNOR_2
+# -- Compiling architecture Equations of XNOR_2
+# -- Compiling entity HALF_ADDER
+# -- Compiling architecture Equations of HALF_ADDER
+# -- Compiling entity INVERTER_VECTOR
+# -- Compiling architecture Equations of INVERTER_VECTOR
+# End time: 19:35:18 on Dec 02,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:18 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ExecutionTasks.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ExecutionTasks
+# -- Compiling architecture OT of ExecutionTasks
+# End time: 19:35:18 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Encoder.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:18 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Encoder.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity eightToThreeEnc
+# -- Compiling architecture str of eightToThreeEnc
+# End time: 19:35:18 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/EightBitAdder.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:18 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/EightBitAdder.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Bit_adder_8
+# -- Compiling architecture Addition of Bit_adder_8
+# End time: 19:35:18 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:18 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Decoder.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity threeToeight_Decoder
+# -- Compiling architecture decode of threeToeight_Decoder
+# End time: 19:35:18 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/BitwiseNand.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:18 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/BitwiseNand.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity BitwiseNand
+# -- Compiling architecture fn1 of BitwiseNand
+# End time: 19:35:18 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/WriteBack (1).vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:18 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/WriteBack (1).vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity WriteBack
+# -- Compiling architecture WB of WriteBack
+# End time: 19:35:18 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RegisterRead.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:18 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/RegisterRead.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity RegisterRead
+# -- Compiling architecture RR of RegisterRead
+# End time: 19:35:18 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionFetch.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:18 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/InstructionFetch.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity InstructionFetch
+# -- Compiling architecture IR of InstructionFetch
+# End time: 19:35:18 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Full_Adder.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:18 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/Full_Adder.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity Full_Adder
+# -- Compiling architecture Struct of Full_Adder
+# End time: 19:35:18 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ALU.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:18 on Dec 02,2019
+# vcom -reportprogress 300 -93 -work work /home/titasc/Desktop/Sem5/EE309/Bonus_Implementation3/Bonus_Implementation/ALU.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity ALU
+# -- Compiling architecture FinalWork of ALU
+# End time: 19:35:18 on Dec 02,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# stdin: <EOF>
+vsim -i -l msim_transcript work.toplevel(project1)
+# vsim -i -l msim_transcript work.toplevel(project1) 
+# Start time: 19:35:26 on Dec 02,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.toplevel(project1)
+# Loading work.gates
+# Loading work.instructionfetch(ir)
+# Loading work.bit_adder_8(addition)
+# Loading work.half_adder(equations)
+# Loading work.full_adder(struct)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.memory_asyncread_syncwrite(form)
+# Loading work.instructiondecode(decode)
+# Loading work.eighttothreeenc(str)
+# Loading work.threetoeight_decoder(decode)
+# Loading work.bit_adder_1(addition)
+# Loading work.scheduler(fml)
+# Loading work.qu(uglycode)
+# Loading work.hazarddetectionunit(spaghetticode)
+# Loading work.registerread(rr)
+# Loading work.rf(wrk)
+# Loading work.executiontasks(ot)
+# Loading work.alu(finalwork)
+# Loading work.bitwisenand(fn1)
+# Loading work.memoryaccess(stage_mem)
+# Loading work.memory_data(arc)
+# Loading work.writeback(wb)
+# ** Warning: Design size of 11376 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Warning: (vsim-8683) Uninitialized out port /toplevel/SS_instance_1/Q/overflow has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /toplevel/SS_instance_1/valid_mask(2 downto 0) has no driver.
+# This port will contribute value (UUU) to the signal network.
+add wave -position insertpoint  \
+sim:/toplevel/r \
+sim:/toplevel/clk \
+sim:/toplevel/R0 \
+sim:/toplevel/R1 \
+sim:/toplevel/R2 \
+sim:/toplevel/R3 \
+sim:/toplevel/R4 \
+sim:/toplevel/R5 \
+sim:/toplevel/R6 \
+sim:/toplevel/R7 \
+sim:/toplevel/IF_ID_1_interface \
+sim:/toplevel/IF_ID_2_interface \
+sim:/toplevel/ID_SS_interface \
+sim:/toplevel/SS_RR_interface \
+sim:/toplevel/RR_EX_1_interface \
+sim:/toplevel/RR_EX_2_interface \
+sim:/toplevel/RR_MEM_interface \
+sim:/toplevel/WR_interface \
+sim:/toplevel/in_pc_f \
+sim:/toplevel/out_pc_1_f \
+sim:/toplevel/out_pc_inc_1_f \
+sim:/toplevel/out_pc_2_f \
+sim:/toplevel/out_pc_inc_2_f \
+sim:/toplevel/out_instruction_1_f \
+sim:/toplevel/out_instruction_2_f \
+sim:/toplevel/in_enable_f \
+sim:/toplevel/in_prop_f \
+sim:/toplevel/out_pc_1_d \
+sim:/toplevel/out_pc_inc_1_d \
+sim:/toplevel/out_instruction_1_d \
+sim:/toplevel/out_control_word_1_d \
+sim:/toplevel/out_jump_add_1_d \
+sim:/toplevel/out_normal_jump_1_d \
+sim:/toplevel/out_prop_1_d \
+sim:/toplevel/out_ls_enable_1_d \
+sim:/toplevel/out_zero_flag_1_d \
+sim:/toplevel/out_start_bit_1_d \
+sim:/toplevel/out_lsreg_a_1_d \
+sim:/toplevel/sm_lm_mux_control_1_d \
+sim:/toplevel/jump_bit_1_d \
+sim:/toplevel/out_pc_2_d \
+sim:/toplevel/out_pc_inc_2_d \
+sim:/toplevel/out_instruction_2_d \
+sim:/toplevel/out_control_word_2_d \
+sim:/toplevel/out_jump_add_2_d \
+sim:/toplevel/out_normal_jump_2_d \
+sim:/toplevel/out_prop_2_d \
+sim:/toplevel/out_ls_enable_2_d \
+sim:/toplevel/out_zero_flag_2_d \
+sim:/toplevel/out_start_bit_2_d \
+sim:/toplevel/out_lsreg_a_2_d \
+sim:/toplevel/sm_lm_mux_control_2_d \
+sim:/toplevel/jump_bit_2_d \
+sim:/toplevel/out_data_1_s \
+sim:/toplevel/out_data_2_s \
+sim:/toplevel/out_data_3_s \
+sim:/toplevel/overflow_s \
+sim:/toplevel/valid_mask_s \
+sim:/toplevel/out_pc_1_r \
+sim:/toplevel/out_pc_inc_1_r \
+sim:/toplevel/out_instruction_1_r \
+sim:/toplevel/out_control_word_1_r \
+sim:/toplevel/out_jump_add_1_r \
+sim:/toplevel/out_ra_1_r \
+sim:/toplevel/out_rb_1_r \
+sim:/toplevel/out_lsreg_a_1_r \
+sim:/toplevel/in_start_bit_1_r \
+sim:/toplevel/out_start_bit_1_r \
+sim:/toplevel/out_pc_2_r \
+sim:/toplevel/out_pc_inc_2_r \
+sim:/toplevel/out_instruction_2_r \
+sim:/toplevel/out_control_word_2_r \
+sim:/toplevel/out_jump_add_2_r \
+sim:/toplevel/out_ra_2_r \
+sim:/toplevel/out_rb_2_r \
+sim:/toplevel/out_lsreg_a_2_r \
+sim:/toplevel/in_start_bit_2_r \
+sim:/toplevel/out_start_bit_2_r \
+sim:/toplevel/out_pc_3_r \
+sim:/toplevel/out_pc_inc_3_r \
+sim:/toplevel/out_instruction_3_r \
+sim:/toplevel/out_control_word_3_r \
+sim:/toplevel/out_jump_add_3_r \
+sim:/toplevel/out_ra_3_r \
+sim:/toplevel/out_rb_3_r \
+sim:/toplevel/out_lsreg_a_3_r \
+sim:/toplevel/in_start_bit_3_r \
+sim:/toplevel/out_start_bit_3_r \
+sim:/toplevel/in_jump_bit_1_r \
+sim:/toplevel/in_jump_bit_2_r \
+sim:/toplevel/in_jump_bit_3_r \
+sim:/toplevel/out_pc_1_e \
+sim:/toplevel/out_pc_inc_1_e \
+sim:/toplevel/out_instruction_1_e \
+sim:/toplevel/out_control_word_1_e \
+sim:/toplevel/out_jump_add_1_e \
+sim:/toplevel/alu_out_1_e \
+sim:/toplevel/out_prop_1_e \
+sim:/toplevel/out_c_1_e \
+sim:/toplevel/out_z_1_e \
+sim:/toplevel/beq_condn_bit_1_e \
+sim:/toplevel/wr_c_bit_1_e \
+sim:/toplevel/out_r7_bit_1_e \
+sim:/toplevel/out_pc_2_e \
+sim:/toplevel/out_pc_inc_2_e \
+sim:/toplevel/out_instruction_2_e \
+sim:/toplevel/out_control_word_2_e \
+sim:/toplevel/out_jump_add_2_e \
+sim:/toplevel/alu_out_2_e \
+sim:/toplevel/out_prop_2_e \
+sim:/toplevel/out_c_2_e \
+sim:/toplevel/out_z_2_e \
+sim:/toplevel/beq_condn_bit_2_e \
+sim:/toplevel/wr_c_bit_2_e \
+sim:/toplevel/out_r7_bit_2_e \
+sim:/toplevel/in_jump_bit_1_e \
+sim:/toplevel/in_jump_bit_2_e \
+sim:/toplevel/in_start_bit_1_e \
+sim:/toplevel/in_start_bit_2_e \
+sim:/toplevel/out_pc_m \
+sim:/toplevel/out_pc_inc_m \
+sim:/toplevel/out_instruction_m \
+sim:/toplevel/out_data_m \
+sim:/toplevel/out_control_word_m \
+sim:/toplevel/in_prop_m \
+sim:/toplevel/out_prop_m \
+sim:/toplevel/zero_flag_out_m \
+sim:/toplevel/out_lm_sm_address_m \
+sim:/toplevel/in_r7_bit_m \
+sim:/toplevel/out_r7_bit_m \
+sim:/toplevel/in_jump_bit_m \
+sim:/toplevel/in_start_bit_m \
+sim:/toplevel/ra_in_m \
+sim:/toplevel/rb_in_m \
+sim:/toplevel/rf_write_data1_out_w \
+sim:/toplevel/rf_write_data2_out_w \
+sim:/toplevel/rf_write_data3_out_w \
+sim:/toplevel/rf_write_pc_out_w \
+sim:/toplevel/data_add_1_out_w \
+sim:/toplevel/data_add_2_out_w \
+sim:/toplevel/data_add_3_out_w \
+sim:/toplevel/enable_1_w \
+sim:/toplevel/prop_1_w \
+sim:/toplevel/write_1_w \
+sim:/toplevel/enable_2_w \
+sim:/toplevel/prop_2_w \
+sim:/toplevel/write_2_w \
+sim:/toplevel/enable_3_w \
+sim:/toplevel/prop_3_w \
+sim:/toplevel/write_3_w \
+sim:/toplevel/r7_write_w \
+sim:/toplevel/in_jump_bit_1_w \
+sim:/toplevel/in_jump_bit_2_w \
+sim:/toplevel/in_jump_bit_3_w \
+sim:/toplevel/in_jump_add_1_w \
+sim:/toplevel/in_jump_add_2_w \
+sim:/toplevel/in_jump_add_3_w \
+sim:/toplevel/bmem_bwb1_ra \
+sim:/toplevel/bmem_bwb2_ra \
+sim:/toplevel/bmem_bwb3_ra \
+sim:/toplevel/bmem_bwb1_rb \
+sim:/toplevel/bmem_bwb2_rb \
+sim:/toplevel/bmem_bwb3_rb \
+sim:/toplevel/bex1_bwb1_ra \
+sim:/toplevel/bex1_bwb2_ra \
+sim:/toplevel/bex1_bwb3_ra \
+sim:/toplevel/bex1_bwb1_rb \
+sim:/toplevel/bex1_bwb2_rb \
+sim:/toplevel/bex1_bwb3_rb \
+sim:/toplevel/bex2_bwb1_ra \
+sim:/toplevel/bex2_bwb2_ra \
+sim:/toplevel/bex2_bwb3_ra \
+sim:/toplevel/bex2_bwb1_rb \
+sim:/toplevel/bex2_bwb2_rb \
+sim:/toplevel/bex2_bwb3_rb \
+sim:/toplevel/q_var \
+sim:/toplevel/counter
+force -freeze sim:/toplevel/r 1 0
+force -freeze sim:/toplevel/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/MEM_instance_1/Mem_data
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/MEM_instance_1/Mem_data
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/RR_instance_1/RF1
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/RR_instance_1/RF1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/RR_instance_1/RF1
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/RR_instance_1/RF1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/RR_instance_1/RF1
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/RR_instance_1/RF1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/RR_instance_1/RF1
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/RR_instance_1/RF1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/SS_instance_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/IF_instance_1/Mem1
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/IF_instance_1/Mem1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/IF_instance_1/Mem1
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /toplevel/IF_instance_1/Mem1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /toplevel/IF_instance_1/Mem1
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /toplevel/IF_instance_1/Mem1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /toplevel/IF_instance_1/Mem1
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /toplevel/IF_instance_1/Mem1
+force -freeze sim:/toplevel/r 0 0
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ps  Iteration: 6  Instance: /toplevel/MEM_instance_1/Mem_data
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 200 ps  Iteration: 6  Instance: /toplevel/MEM_instance_1/Mem_data
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 300 ps  Iteration: 4  Instance: /toplevel/MEM_instance_1/Mem_data
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 300 ps  Iteration: 4  Instance: /toplevel/MEM_instance_1/Mem_data
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 300 ps  Iteration: 5  Instance: /toplevel/MEM_instance_1/Mem_data
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 300 ps  Iteration: 5  Instance: /toplevel/MEM_instance_1/Mem_data
+run
+run
+run
+run
+run
+run
+# End time: 19:36:00 on Dec 02,2019, Elapsed time: 0:00:34
+# Errors: 0, Warnings: 44
